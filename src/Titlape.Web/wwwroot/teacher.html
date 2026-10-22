@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Dashboard</title>
+  <meta name="theme-color" content="#b9532c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/"><span class="brand-mark">T</span>Teacher Dashboard</a>
+    <span class="faint" id="where"></span>
+    <span class="spacer"></span>
+    <a class="btn small ghost" href="/ops.html">Hub status</a>
+    <span id="net" class="chip"></span>
+    <span id="live" class="chip indigo"><span class="dot"></span>Live</span>
+    <button class="btn small ghost" id="logout">Sign out</button>
+  </header>
+  <main>
+    <div class="kpis" id="kpis"></div>
+
+    <div class="section-title">
+      <h2>Needs your attention</h2>
+      <span class="faint" id="alertNote"></span>
+    </div>
+    <div class="grid cols-2" id="alerts"></div>
+
+    <div class="section-title">
+      <h2>Class mastery</h2>
+      <span class="faint">Estimated with Bayesian Knowledge Tracing · click a learner to review or change their pathway</span>
+    </div>
+    <section class="card table-wrap"><table id="heat"></table></section>
+
+    <div class="grid cols-2" style="margin-top:16px">
+      <section class="card">
+        <h2>Pathway proposals</h2>
+        <p class="faint">Agents can only propose. Nothing changes until you approve, modify or dismiss.</p>
+        <div id="proposals"></div>
+      </section>
+      <section class="card">
+        <h2>Recent tutoring decisions</h2>
+        <p class="faint">Every turn is traced step by step. Open one to see why the tutor responded as it did.</p>
+        <div class="table-wrap"><table id="traces"></table></div>
+      </section>
+    </div>
+  </main>
+
+  <dialog id="dlg">
+    <div class="dlg-head"><h2 id="dlgTitle" style="margin:0"></h2><button class="btn small" id="dlgClose">Close</button></div>
+    <div class="dlg-body" id="dlgBody"></div>
+  </dialog>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/teacher.js"></script>
+</body>
+</html>

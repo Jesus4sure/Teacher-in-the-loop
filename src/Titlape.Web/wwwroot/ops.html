@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hub Operations</title>
+  <meta name="theme-color" content="#b9532c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/"><span class="brand-mark">T</span>Hub Operations</a>
+    <span class="faint" id="node"></span>
+    <span class="spacer"></span>
+    <span id="net" class="chip"></span>
+    <button class="btn small ghost" id="logout">Sign out</button>
+  </header>
+  <main>
+    <div class="kpis" id="kpis"></div>
+
+    <div class="grid cols-2" style="margin-top:16px">
+      <section class="card">
+        <h2>Edge node controls</h2>
+        <p class="faint">Simulate field conditions. Only the hub administrator can change these.</p>
+        <div class="btn-row" style="align-items:center;margin:10px 0">
+          <label class="toggle"><input type="checkbox" id="online"> Backhaul online (3G)</label>
+          <button class="btn small" id="syncNow">Sync now</button>
+        </div>
+        <label for="battery" class="faint">Solar battery: <b id="batteryV"></b></label>
+        <input type="range" id="battery" min="0" max="100" step="1" style="width:100%">
+        <p id="route" style="margin-top:10px"></p>
+      </section>
+      <section class="card">
+        <h2>Inference engines (Layer 2)</h2>
+        <div class="table-wrap"><table id="engines"></table></div>
+        <p class="faint" id="engNote"></p>
+      </section>
+    </div>
+
+    <div class="section-title"><h2>Background delta-sync</h2><span class="faint">Protobuf wire format, Brotli when it helps · compared with the equivalent REST/JSON payload</span></div>
+    <section class="card table-wrap"><table id="sync"></table></section>
+
+    <div class="grid cols-2" style="margin-top:16px">
+      <section class="card">
+        <h2>Tamper-evident audit log</h2>
+        <p id="auditStatus"></p>
+        <div class="table-wrap" style="max-height:360px;overflow:auto"><table id="audit"></table></div>
+      </section>
+      <section class="card">
+        <h2>Bias audit (live data)</h2>
+        <p class="faint">Four-fifths rule across language and gender cohorts.</p>
+        <div id="bias"></div>
+        <h2 style="margin-top:16px">Agent tool grants</h2>
+        <div id="grants" class="faint"></div>
+      </section>
+    </div>
+
+    <div class="section-title">
+      <h2>System evaluation matrix (Section 7)</h2>
+      <div class="btn-row"><span class="faint" id="evalNote">Runs simulated cohorts through a fresh platform with fault-injected models.</span>
+        <button class="btn primary" id="runEval">Run evaluation</button></div>
+    </div>
+    <section class="card table-wrap"><table id="matrix"><tbody><tr><td class="empty">Not run yet.</td></tr></tbody></table></section>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/ops.js"></script>
+</body>
+</html>

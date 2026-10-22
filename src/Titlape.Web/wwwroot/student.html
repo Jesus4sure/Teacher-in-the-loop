@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TITLAPE Practice</title>
+  <meta name="theme-color" content="#b9532c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/"><span class="brand-mark">T</span>Practice</a>
+    <span class="spacer"></span>
+    <label class="faint" for="lang">Language</label>
+    <select id="lang" style="width:auto">
+      <option>English</option><option>Yoruba</option><option>Hausa</option><option>Swahili</option><option>Amharic</option>
+    </select>
+    <span id="net" class="chip"></span>
+    <button class="btn small ghost" id="logout">Sign out</button>
+  </header>
+  <main>
+    <div class="grid" style="grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); align-items:start" id="layout">
+      <section class="card">
+        <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap">
+          <div>
+            <div class="faint" id="skill">Loading…</div>
+            <div class="question" id="question" aria-live="polite"></div>
+          </div>
+          <div style="min-width:170px">
+            <div class="faint">This skill <span id="mpct"></span></div>
+            <div class="bar-track"><div class="bar-fill" id="mbar" style="width:0"></div></div>
+          </div>
+        </div>
+        <hr style="border:none;border-top:1px solid var(--line);margin:14px 0">
+        <div class="chat" id="chat" aria-live="polite"></div>
+        <form class="composer" id="form" autocomplete="off">
+          <input type="text" id="text" inputmode="text" placeholder="Type your answer, e.g. 85 or 3/7" maxlength="200" aria-label="Your answer">
+          <button class="btn primary" id="send" type="submit">Send</button>
+        </form>
+        <div class="btn-row" style="margin-top:8px">
+          <button class="btn small" id="stuck" type="button">I don't understand</button>
+          <button class="btn small" id="new" type="button">New session</button>
+        </div>
+        <p class="faint" style="margin-top:10px">Your teacher can see how you are doing so they can help you. The tutor will never just give you the answer — it helps you find it.</p>
+      </section>
+      <aside class="card">
+        <h2 id="hello">My progress</h2>
+        <div id="progress"></div>
+      </aside>
+    </div>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/student.js"></script>
+</body>
+</html>

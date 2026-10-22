@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Titlape.Core\Titlape.Core.csproj" />
+    <ProjectReference Include="..\Titlape.CrossCutting\Titlape.CrossCutting.csproj" />
+    <ProjectReference Include="..\Titlape.Data\Titlape.Data.csproj" />
+    <ProjectReference Include="..\Titlape.Models\Titlape.Models.csproj" />
+    <ProjectReference Include="..\Titlape.Governance\Titlape.Governance.csproj" />
+    <ProjectReference Include="..\Titlape.Context\Titlape.Context.csproj" />
+  </ItemGroup>
+</Project>

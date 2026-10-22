@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TITLAPE</title>
+  <meta name="description" content="Teacher-in-the-Loop Agentic Precision Education for resource-constrained Sub-Saharan Africa">
+  <meta name="theme-color" content="#b9532c">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="bar">
+    <a class="brand" href="/"><span class="brand-mark">T</span>TITLAPE</a>
+    <span class="spacer"></span>
+    <span id="net" class="chip"></span>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Teacher-in-the-Loop Agentic Precision Education</h1>
+      <p>The teacher teaches the lesson in class. After school, an AI tutor gives each learner step-by-step practice at the
+        school's solar hub — and every recommendation goes back to the teacher, who stays in charge.</p>
+    </section>
+
+    <div class="grid cols-3" style="margin-top:18px">
+      <section class="card">
+        <h2>Learner</h2>
+        <p class="faint">After-school practice with the Socratic tutor.</p>
+        <div id="students" class="pick"></div>
+      </section>
+      <section class="card">
+        <h2>Teacher</h2>
+        <p class="faint">Class dashboard: alerts, explanations, pathways, traces.</p>
+        <div id="teachers" class="pick"></div>
+      </section>
+      <section class="card">
+        <h2>Hub operations</h2>
+        <p class="faint">Edge node health, sync, audit chain and the evaluation matrix.</p>
+        <div class="pick"><button class="btn" id="admin">Hub Administrator <span class="faint">admin</span></button></div>
+      </section>
+    </div>
+
+    <div class="section-title"><h2>How the platform is built</h2><span class="faint">6-layer architecture with cross-cutting Zero-Trust security and communication</span></div>
+    <div class="layers">
+      <div class="layer"><b>Layer 6 · Autonomous</b>Master Orchestrator, Student PWA, Teacher Portal</div>
+      <div class="layer"><b>Layer 5 · Intelligence</b>Diagnostic, Socratic, Localization, Safety agents</div>
+      <div class="layer"><b>Layer 4 · Context</b>Curriculum RAG, student memory (BKT), pathways</div>
+      <div class="layer"><b>Layer 3 · XAI / RAI</b>Guardrails, CoT traces, SHAP, bias audit, audit chain</div>
+      <div class="layer"><b>Layer 2 · Model</b>Edge SLM (llama.cpp) / cloud (vLLM), signature checks</div>
+      <div class="layer"><b>Layer 1 · Data</b>PII gateway, AES-256, CRDT offline sync, vectors</div>
+    </div>
+    <p class="faint" style="margin-top:20px">Demo deployment: all learners, schools and activity are fictional and generated on start-up.</p>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>

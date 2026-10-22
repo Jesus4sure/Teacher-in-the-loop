@@ -1,0 +1,5 @@
+bin/
+obj/
+titlape-data/
+*.user
+.vs/
